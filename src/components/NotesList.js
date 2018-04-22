@@ -5,8 +5,9 @@ import Note from '../containers/Note'
 
 const NotesList = (props) => (
     <List>
-        {
+        {props.notes.length ?
             props.notes.map( note => <Note key={note.id} note={note} /> )
+      : <span>notes on this tag not found</span>
         }
     </List>
 
